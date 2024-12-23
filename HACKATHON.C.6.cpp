@@ -37,23 +37,23 @@ int main(){
 			break;
 		}
 		case 3:{
-			int n_perfect;
-			int tong=1;
-			for(int i=2;i<=sqrt(n_perfect);i++){
-			if(n_perfect%i==0){
-				tong+=i;
-				if(i != n_perfect/i){
-					tong+=n/i;
-					return 1;
-				}
-				return 0;
+		        int count; 
+			for(int i=0;i<n;i++){
+			       int sum=0;
+			for(int j=1;j<arr[i];j++){
+			       if(arr[i]%j==0){
+			sum+=j; 
+			} 
 			}
-			
-		}
-		if(tong==n_perfect||n!=1){
-		
-			
-		}
+		        if(sum==arr[i]){
+			        printf("%d la so hoan hao \t",arr[i]); 
+			count++; 
+				}
+			}
+			if (count==0){
+				printf("mang khong co so hoan hao"); 
+			}
+			printf("\n"); 
 			
 			break;
 		}
@@ -98,10 +98,12 @@ int main(){
 					arr[i+1]=arr[i];
 					arr[i]=temp;
 				}
-				printf("mang sau khi da sap xep la: ");
-				for(int i=0;i<n;i++){
-					printf("%d ",arr[i]);
+				
+					
 				}
+			printf("mang sau khi da sap xep la: ");
+				for(int i=0;i<n;i++){
+				printf("%d ",arr[i]);
 			}
 			break;
 		}
